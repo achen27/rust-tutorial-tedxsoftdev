@@ -1,6 +1,125 @@
 <!DOCTYPE html>
 <html>
-  <head>Rust Tutorial</head>
+  <head>
+    <title>Fe2O3 Tutorial</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+  </head>
   <body>
+    <div class="jumbotron text-center">
+      <h1>RUST TUTORIAL</h1>
+      <h6>TedXSoftDev</h6>
+      <h4>Amanda Chen & Elizabeth Doss</h4>
+    </div>
+    <div class="container">
+      <h2>WHAT IS RUST?</h2>
+      <p>Rust is a programming language focused on safety, control of memory layout, and concurrency.
+      <p>Concurrency: the ability of different parts of a program, algorithm, or problem to be executed out-of-order or in partial order, without affecting the final outcome.
+      <p>Rust is syntactically similar to C and C++.
+      <hr>
+      <h2>A BRIEF HISTORY</h2>
+      <p>
+      <p>
+      <hr>
+      <h2>WHY RUST?</h2>
+      <p></p>
+      <hr>
+      <h2>INSTALLING RUST</h2>
+      <p>You can Rust through rustup, a command line tool for managing Rust versions and associated tools.
+      <p>In Terminal (For Linux and Mac):
+      <pre>
+        $ curl https://sh.rustup.rs -sSf | sh
+          Rust is installed now. Great!
+      </pre>
+      <hr>
+      <h2>HELLO WORLD!</h2>
+      <p> Simplest Rust program:
+      <pre>
+        fn main() {
+        1234// Note that Rust indents with four spaces
+
+        println!("Hello, world!");
+        // The ! means that you are calling a macro
+        // instead of a normal function
+        }
+
+        $ rustc main.rs  //similar to gcc in C
+        $ ./main   //binary executable
+
+        Hello, world!
+      </pre>
+      <hr>
+      <h2>CREATING A PROJECT WITH CARGO</h2>
+      <p>Cargo is Rust’s build system and package manager.
+      <p>Cargo is used to manage Rust projects because it handles a lot of
+        tasks, such as building code, downloading the libraries the code needs
+        (dependencies), and building those libraries.
+      <pre>
+        $ cargo new hello_cargo
+        $ cd hello_cargo
+      </pre>
+      <p>The first command creates a new directory called hello_cargo.
+        The project is named hello_cargo, and Cargo creates its files in a directory of the same name.
+      <p>Cargo will automatically generated two files and one directory: a Cargo.toml file and a src directory with a main.rs file inside.
+      <p>Filename: Cargo.toml (<a href="https://groups.google.com/a/stuy.edu/d/msg/softdev19-20/EDy-PGa6LRg/BROff_V5AgAJ">Tom’s Obvious, Minimal Language</a>)
+      <pre>
+        [package]
+        name = "hello_cargo"
+        version = "0.1.0"
+        authors = ["Your Name <you@example.com>"]
+        edition = "2018"
+
+        [dependencies]
+      </pre>
+      <p> Filename: src/main.rs
+      <pre>
+        fn main() {
+          println!("Hello, world!");
+        }
+      </pre>
+      <p>Cargo expects source files to live inside the src directory. The top-level project directory is just for README files, license information, configuration files, and anything else not related to your code. Using Cargo helps you organize your projects.
+      <hr>
+      <h2>BUILDING AND RUNNING A CARGO PROJECT</h2>
+      <p> The <b>cargo build</b> command creates an executable file in target/debug/hello_cargo rather than in your current directory.
+      <pre>
+        $ cargo build
+          Compiling hello_cargo v0.1.0 (file:///projects/hello_cargo)
+            Finished dev [unoptimized + debuginfo] target(s) in 2.85 secs
+      </pre>
+      <p>You can run the executable with:
+      <pre>
+        $ ./target/debug/hello_cargo #
+        Hello, world!
+      </pre>
+      <p>You can also use <b>cargo run</b> to compile the code and then run the resulting executable all in one command:
+      <pre>
+        $ cargo run
+          Compiling hello_cargo v0.1.0 (file:///projects/hello_cargo)
+            Finished dev [unoptimized + debuginfo] target(s) in 0.33 secs
+              Running `target/debug/hello_cargo`
+          Hello, world!
+      </pre>
+      <p>Cargo also provides a command called cargo check. This command quickly checks your code to make sure it compiles but doesn’t produce an executable:
+      <pre>
+        $ cargo check
+          Checking hello_cargo v0.1.0 (file:///projects/hello_cargo)
+            Finished dev [unoptimized + debuginfo] target(s) in 0.32 secs
+      </pre>
+      <p>Often, cargo check is much faster than cargo build, because it skips the step of producing an executable. If you’re continually checking your work while writing the code, using cargo check will speed up the process.
+      <hr>
+      <h2>DEMO</h2>
+      <p></p>
+      <hr>
+      <h2>RESOURCES</h2>
+        <p>- <a href="https://doc.rust-lang.org/book/">The Rust Programming Language</a>
+        <p>- 
+      <hr>
+      <footer>
+          <div class="row">
+              <div class="col-md-6">
+                  <p>Copyright &copy; 2020 The Riftbreakers</p>
+              </div>
+          </div>
+      </footer>
+      </div>
   </body>
  </html>
